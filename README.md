@@ -5,16 +5,10 @@ Decision inc Practical
 
 
 WEB	
-1) HC.Web (Angular)
-	
-	- npm install  (for intall all the packages required for angular)
-	- npm start    (this command will build and run the project)
+1) HC.Web - Front End (Angular 11)
+	- Including bootstrap for CSS
 
-    - Configuration : 
-		1. environment 
-				- baseUrl (Here we need to configure base url for API)
-
-2) API
+2) API (.NET 5 Framework)
 
 2.1) HC.API (WEB API)
 	
@@ -38,4 +32,17 @@ WEB
 	Manager :
 		- This contains implemenations for interface methods.
 	
+# Steps 
 	
+1) Step 1: Build and run HC.API Project 
+	- It will automatically restor the packeges required.
+
+2) Step 2: Pick base url from opened browser (Exclude '/index.html').
+
+3) Step 3: Open HC.Web --> harbal-control --> src --> environments --> environment.ts and paste copied url in baseUrl and replace with existing value.
+
+4) Step 4: Open cmd(Terminal) and run command 'npm install'
+
+5) Step 5: Once done with all the required package installation run next command 'npm start OR ng serve'
+
+6) Step 6: Open "http://localhost:4200" in browser
