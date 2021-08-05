@@ -1,0 +1,58 @@
+<div class="container-fluid p-2">
+  <div class="card" >
+    <div class="card-body">
+      <h5 class="card-title">Harbal Control</h5>
+      <div class="row mt-5">
+        <div class="col-md-3">
+          <input class="form-control" placeholder="Number of boats" [(ngModel)]="count" name="CountText">
+        </div>
+        <div class="col-md-3">
+          <a class="btn btn-primary" (click)="BindData()">Generate </a>
+          <a class="btn btn-secondary" style="margin-left:30px;" (click)="RefreshWindDetails()">Refresh Wind Details</a>
+        </div>
+        <div class="col-md-3" style="padding-top:7px;">
+          <b>Wind Speed :</b> {{windSpeed}}/kmph
+        </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-12">
+            <div class="table-resposive">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <td>#</td>
+                    <td>Boat</td>
+                    <td>Speed (KM/H)</td>
+                    <td>Time (Hours = (Minutes / 60))</td>
+                    <td>Status</td>
+                  </tr>
+                </thead>
+                <tbody *ngIf="boatList!=null && boatList.length > 0">
+                  <tr *ngFor="let boat of boatList">
+                    <td>{{boat.index}}</td>
+                    <td>{{boat.name}}</td>
+                    <td>{{boat.speed}}</td>
+                    <td>{{boat.time}}</td>
+                    <td>
+                      {{ getBoatStatusText(boat.status) }} 
+                      <div class="progress" *ngIf=" boat.status==1">
+                        <div class="progress-bar" role="progressbar" [style.width.%]="progressbar" aria-valuenow="{{progressbar}}" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+                <tbody *ngIf="boatList==null || boatList.length ==0">
+                  <tr>
+                    <td colspan="5" class="text-center">No boat arrived yet.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  
+</div>
+
+
