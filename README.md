@@ -2,8 +2,10 @@
 Decision inc Practical
 
 # Projects
-	
-1 HC.Web (Angular)
+
+
+WEB	
+1) HC.Web (Angular)
 	
 	- npm install  (for intall all the packages required for angular)
 	- npm start    (this command will build and run the project)
@@ -12,19 +14,21 @@ Decision inc Practical
 		1. environment 
 				- baseUrl (Here we need to configure base url for API)
 
-2 HC.API (WEB API)
+2) API
+
+2.1) HC.API (WEB API)
 	
 	- This is API project contails API end points
 
-3 HC.Library
+2.2) HC.Library
 	
 	- This project contains common utility files and common class
 
-4 HC.Entitie
+2.3) HC.Entitie
 	
 	- This project contains list of models 
 
-5 HC.Core
+2.4) HC.Core
 	
 	- This contains list of manager where we can write business logic.
 
