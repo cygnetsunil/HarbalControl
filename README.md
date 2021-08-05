@@ -1,11 +1,11 @@
 # Harbal Control
-Decision inc Practical
+
 
 # Projects
 
+1) WEB
 
-WEB	
-1) HC.Web - Front End (Angular 11)
+1.1) HC.Web - Front End (Angular 11)
 	- Including bootstrap for CSS
 
 2) API (.NET 5 Framework)
