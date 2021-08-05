@@ -1,4 +1,4 @@
-# HarbalControl
+# Harbal Control
 Decision inc Practical
 
 # Projects
