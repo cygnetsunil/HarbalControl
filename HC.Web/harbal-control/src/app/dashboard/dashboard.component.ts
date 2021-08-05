@@ -32,7 +32,10 @@ export class DashboardComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.countDown.unsubscribe();
   }
-  BindData() {
+  BindData()
+  {
+    this.counter = 0;
+    this.progressbar = 0;
     this.boatList = [];
     this.httpService.get<any>("HarbalControl/RandomBoats/" + this.count).toPromise().then(result => {
       if (result != null) {
